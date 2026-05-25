@@ -860,8 +860,8 @@
                 this.showStatus('loading', '正在使用Cookie访问签到链接...');
 
                 try {
-                    // 使用PHP代理来发送请求
-                    const response = await fetch('proxy.php', {
+                    // 使用 Cloudflare Pages Function 代理来发送请求
+                    const response = await fetch('/api/proxy', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json',
